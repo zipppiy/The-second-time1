@@ -1,0 +1,59 @@
+/* Reset and global styles */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: 'Georgia', serif;
+  color-scheme: dark;
+  background-color: #000000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+/* Prevent zoom on mobile input */
+input,
+select,
+textarea,
+button {
+  font-size: max(16px, 1em);
+}
+
+/* Touch optimization */
+button {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Scrollbar hidden where unnecessary */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* Focus visible — accessibility */
+:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.4);
+  outline-offset: 2px;
+}
+
+/* Selection */
+::selection {
+  background: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.9);
+}

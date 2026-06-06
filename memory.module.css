@@ -1,0 +1,78 @@
+.memoryScene {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.sceneContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1.5rem, 5vw, 3rem);
+}
+
+.sceneProse {
+  max-width: min(640px, 88vw);
+  text-align: center;
+}
+
+.sceneProse p {
+  font-family: 'Georgia', serif;
+  font-size: clamp(0.9375rem, 2.5vw, 1.125rem);
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.75;
+  margin: 0 0 1.25rem;
+}
+
+.interactionArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: min(600px, 88vw);
+}
+
+.contextText {
+  font-family: 'Georgia', serif;
+  font-size: clamp(0.9375rem, 2.5vw, 1.0625rem);
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.7;
+  text-align: center;
+  margin: 0;
+}
+
+.actionButton {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'Georgia', serif;
+  font-size: clamp(0.875rem, 2.5vw, 1rem);
+  padding: 0.875rem 2.5rem;
+  cursor: pointer;
+  transition: all 300ms ease;
+  letter-spacing: 0.05em;
+  touch-action: manipulation;
+  min-height: 48px; /* Mobile tap target */
+}
+
+.actionButton:hover:not(:disabled) {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.actionButton:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.conclusion {
+  max-width: min(640px, 88vw);
+  text-align: center;
+}

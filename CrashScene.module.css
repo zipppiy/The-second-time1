@@ -1,0 +1,89 @@
+.crashScene {
+  position: fixed;
+  inset: 0;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 400ms ease;
+}
+
+.wrongAngle {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(90deg);
+  animation: flicker 150ms ease forwards;
+}
+
+.roadLine {
+  width: 4px;
+  height: 60%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255, 255, 255, 0.15),
+    transparent
+  );
+}
+
+.watcherOnRoad {
+  position: absolute;
+  bottom: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: flicker 100ms ease forwards;
+}
+
+.watcherShape {
+  width: 18px;
+  height: 50px;
+  background: rgba(200, 185, 165, 0.6);
+  border-radius: 2px;
+  position: relative;
+}
+
+.watcherShape::before {
+  content: '';
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(200, 185, 165, 0.6);
+}
+
+.againText {
+  font-family: 'Georgia', serif;
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+  letter-spacing: 0.08em;
+  animation: flickerText 1500ms ease forwards;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+@keyframes flicker {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes flickerText {
+  0% { opacity: 0; }
+  20% { opacity: 0.7; }
+  80% { opacity: 0.7; }
+  100% { opacity: 0; }
+}

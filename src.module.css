@@ -1,0 +1,29 @@
+.container {
+  position: fixed;
+  bottom: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: min(600px, 90vw);
+  text-align: center;
+  z-index: 100;
+  transition: opacity 600ms ease;
+  pointer-events: none;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.text {
+  font-family: 'Georgia', serif;
+  font-size: clamp(0.875rem, 2.5vw, 1.0625rem);
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  margin: 0;
+  font-style: italic;
+}
